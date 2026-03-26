@@ -1,0 +1,117 @@
+:root {
+    --gold: #fbdc8d;
+    --dark-blue: #2c4a5e;
+    --light-blue: #4a748c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    /* Degradado de fondo idéntico */
+    background: linear-gradient(to bottom, #1d3344 0%, #3e6681 50%, #f0f4f7 95%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Navegación superior */
+.navbar {
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--gold);
+    border: 1.5px solid var(--gold);
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    background: rgba(251, 220, 141, 0.2);
+}
+
+/* Título con efecto flotante */
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.name-container {
+    position: relative;
+    animation: float 5s ease-in-out infinite; /* El efecto flotante */
+}
+
+.main-title {
+    font-family: 'Mrs+Saint+Delafield', cursive; /* Fuente manuscrita */
+    font-size: 11rem;
+    color: var(--gold);
+    font-weight: 100;
+    line-height: 1;
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.4);
+}
+
+/* Pequeño detalle del sol a la derecha */
+.sun-icon::after {
+    content: '☀️';
+    position: absolute;
+    right: -40px;
+    bottom: 40px;
+    font-size: 2rem;
+    opacity: 0.6;
+    filter: sepia(1) saturate(5);
+}
+
+.subtitle {
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    max-width: 450px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Efecto de puntos en la base */
+.dots-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    background-image: radial-gradient(rgba(44, 74, 94, 0.4) 1px, transparent 1px);
+    background-size: 15px 15px;
+    mask-image: linear-gradient(to top, black, transparent);
+    z-index: 1;
+}
+
+/* Animación de flotar */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-title { font-size: 6rem; }
+    .navbar { flex-wrap: wrap; justify-content: center; padding: 0 20px; }
+}

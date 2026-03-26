@@ -1,0 +1,107 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* Fondo degradado similar a la imagen */
+    background: linear-gradient(to bottom, #2c4a5e 0%, #3d6a7a 60%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Fondo de puntos (Opcional para textura) */
+body::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background-image: radial-gradient(#2c4a5e 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Navegación */
+header {
+    width: 100%;
+    padding: 40px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.btn {
+    text-decoration: none;
+    color: #f1c40f; /* Color dorado/amarillo */
+    border: 2px solid #f1c40f;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f1c40f;
+    color: #2c4a5e;
+}
+
+/* Contenido Principal */
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -50px;
+}
+
+.floating-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 8rem;
+    color: #fbdc8d;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    /* Activación del efecto flotante */
+    animation: float 4s ease-in-out infinite;
+}
+
+.quote {
+    font-size: 0.9rem;
+    max-width: 500px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+    text-transform: uppercase;
+}
+
+/* Efecto Flotante */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsividad básica */
+@media (max-width: 768px) {
+    .floating-text { font-size: 5rem; }
+    nav ul { flex-wrap: wrap; gap: 10px; }
+}

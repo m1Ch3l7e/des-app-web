@@ -4,11 +4,11 @@
 
 /* 2. Variables de Color para fácil edición */
 :root {
-    --bg-crema: #fdfdf5;
-    --azul-texto: #4a7db2;
-    --dorado-bordes: #d4c180;
-    --rosa-home: #f5b1c7;
-    --gris-suave: #666;
+    --bg-crema: #fdfcf6;
+    --azul-texto: #1f628e;
+    --dorado-bordes: #ffd943;
+    --rosa-home: #f16161;
+    --gris-suave: #3d919d;
 }
 
 /* 3. Configuración Base */
@@ -153,7 +153,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 180px;
-    border: 1px solid var(--rosa-home); /* Borde rosa sutil como en la imagen */
+    border: 1px solid var(--rosa-home); /* Borde rojo sutil como en la imagen */
     border-radius: 12px;
     text-decoration: none;
     transition: transform 0.3s ease;
@@ -161,7 +161,7 @@ body {
 
 .nav-card:hover {
     transform: translateY(-5px);
-    background-color: #fffef9;
+    background-color: #fffcf6;
 }
 
 .nav-card i {

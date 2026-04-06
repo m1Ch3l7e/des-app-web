@@ -3,299 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Irán Michelle Samaniego Pérez</title>
+    <title>Portafolio de Irán Michelle</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Definición de los colores solicitados */
-        :root {
-            --azul-titulo: #1f628e;
-            --rojo-resaltado: #f16161;
-            --amarillo-iconos: #ffd943;
-            --beige-fondo: #fffcf6;
-            --azul-descripcion: #3d919d;
+        /* Estilos Generales - Reseteo y Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            background-color: var(--beige-fondo);
-            font-family: 'Public Sans', sans-serif; /* Tipografía base */
-            margin: 0;
-            padding: 0;
+            font-family: 'Public Sans', sans-serif; /* Tipografía para el texto del cuerpo */
+            background-color: #fffcf6; /* Color de fondo crema pálido */
+            color: #3d919d;
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #333;
+            min-height: 100vh;
+            padding: 40px;
         }
 
-        /* Contenedor principal para centrar el contenido */
-        .page-container {
+        /* Estilos para el Encabezado (Header) */
+        header {
             width: 100%;
-            max-width: 1000px;
-            padding: 20px;
-            box-sizing: border-box;
-            position: relative;
+            max-width: 1200px;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative; /* Para posicionar la casa absoluta */
         }
 
-        /* --- Estilos para los iconos de casa --- */
-        .home-icon {
-            color: var(--rojo-resaltado);
-            font-size: 24px;
+        .home-icon-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #f16161; /* Color rosa suave para la casa */
+            font-size: 1.2rem;
             text-decoration: none;
-            position: absolute; /* Para alinearlo a la izquierda del contenedor */
-            left: 20px;
-            transition: opacity 0.3s;
         }
 
-        .home-icon:hover {
-            opacity: 0.7;
+        .main-title {
+            font-family: 'Pinyon Script', cursive; /* Tipografía Script Hermosa y Deliciosa */
+            font-size: 5rem; /* Ajuste para un aspecto grande pero quieto */
+            color: #1f628e; /* Color azul polvoriento */
+            font-weight: normal; /* "Estilo quieto" - no audaz */
+            margin-bottom: 30px;
+            margin-top: 10px; /* Separación de la casa */
         }
 
-        /* --- 1. SECCIÓN SUPERIOR: Título y Menú --- */
-        .top-section {
-            margin-top: 50px; /* Espacio para el icono de casa */
+        /* Menú Superior */
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .top-nav a {
+            font-family: 'Public Sans', sans-serif; /* Tipografía específica solicitada */
+            font-weight: 300; /* Peso ligero para que coincida */
+            color: #3d919d;
+            text-decoration: none;
+            padding: 8px 15px;
+            border: 1px solid #ffd943; /* Color dorado apagado para el borde */
+            border-radius: 20px; /* Bordes redondeados */
+            font-size: 0.8rem;
+            text-transform: uppercase; /* Todo en mayúsculas como en la imagen */
+            transition: all 0.3s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: #ffd943;
+            color: white;
+        }
+
+        /* Estilos para la sección de Perfil */
+        .profile-section {
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 60px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: 60px;
         }
 
-        /* Estilo para la casa superior */
-        .top-section .home-icon {
-            top: 20px;
-        }
-
-        /* Título 'Portafolio' */
-        .main-title {
-            font-family: 'Pinyon Script', cursive;
-            color: var(--azul-titulo);
-            font-size: 80px;
-            margin: 0;
-            font-weight: normal;
-        }
-
-        /* Menú de botones superiores */
-        .main-nav {
-            margin-top: 30px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .main-nav a {
-            font-family: 'Public Sans', sans-serif;
-            font-weight: 700;
-            font-size: 10px;
-            text-transform: uppercase;
+        .home-icon-middle {
+            align-self: flex-start;
+            color: #f16161;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
             text-decoration: none;
-            color: var(--azul-titulo);
-            padding: 8px 25px;
-            border: 2px solid var(--amarillo-iconos);
-            border-radius: 20px;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        .main-nav a:hover {
-            background-color: var(--amarillo-iconos);
-            color: #fff;
-        }
-
-        /* --- 2. SECCIÓN MEDIA: Perfil --- */
-        .profile-section {
-            margin-top: 80px;
-            margin-bottom: 40px;
+        .profile-container {
             display: flex;
             align-items: flex-start;
             gap: 40px;
+        }
+
+        .profile-image-container {
+            flex: 0 0 200px; /* Ancho fijo para el contenedor de la imagen */
             position: relative;
         }
 
-        /* Estilo para la casa media */
-        .profile-section .home-icon {
-            top: 0;
-        }
-
-        /* Contenedor de la imagen e ilustración */
-        .profile-illustration-container {
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        /* Palabra 'Perfil' manuscrita */
-        .profile-script-text {
+        .profile-script-overlay {
             font-family: 'Pinyon Script', cursive;
-            font-size: 45px;
-            color: var(--amarillo-iconos);
             position: absolute;
-            left: -35px;
             top: -20px;
-            transform: rotate(-10deg);
-            white-space: nowrap;
+            left: -30px;
+            font-size: 1.5rem;
+            color: #ffd943; /* Color dorado */
+            opacity: 0.6;
         }
 
-        /* Imagen de la chica */
         .profile-image {
-            width: 200px; /* Ajusta según sea necesario */
+            width: 100%;
             height: auto;
-            border-radius: 10px;
-            /* Si tienes la imagen PNG, reemplaza 'perfil.png' */
-            /* Si no tienes imagen, se mostrará un recuadro gris */
-            content: url('perfil.png'); 
+            object-fit: contain;
         }
 
-        /* Si no tienes la imagen, este estilo lo reemplaza por un marcador de posición */
-        .profile-image:not([src]), .profile-image[src=""] {
-            background-color: #ddd;
-            width: 200px;
-            height: 250px;
-            display: block;
-            border: 1px dashed #777;
-        }
-
-        /* Contenedor del texto de la descripción */
         .profile-text {
-            flex-grow: 1;
-            padding-top: 20px;
+            flex: 1;
+            text-align: left;
         }
 
         .profile-name {
             font-family: 'Public Sans', sans-serif;
             font-weight: 700;
-            font-size: 24px;
-            color: var(--azul-titulo);
-            margin: 0 0 15px 0;
-        }
-
-        .profile-description {
-            font-family: 'Public Sans', sans-serif;
-            font-weight: 400;
-            font-size: 12px;
-            color: var(--azul-descripcion);
-            line-height: 1.6;
-            margin-bottom: 20px;
-            max-width: 500px;
-        }
-
-        /* Frase inferior */
-        .tagline {
-            font-family: 'Public Sans', sans-serif;
-            font-weight: 700;
-            font-size: 10px;
-            text-transform: uppercase;
-            color: var(--amarillo-iconos);
-            letter-spacing: 2px;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        /* --- 3. SECCIÓN INFERIOR: Menús de Iconos --- */
-        .bottom-sections {
-            margin-top: 120px;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        /* Estilo para la casa inferior */
-        .bottom-sections .home-icon {
-            top: 0;
-        }
-
-        /* Cajas individuales de cada sección */
-        .nav-box {
-            width: 180px;
-            height: 180px;
-            border: 1px solid var(--rojo-resaltado);
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .nav-box:hover {
-            background-color: rgba(241, 97, 97, 0.05); /* Un tinte rojo claro en hover */
-            transform: translateY(-5px);
-        }
-
-        /* Estilos para los iconos grandes */
-        .nav-box-icon {
-            color: var(--amarillo-iconos);
-            font-size: 60px;
+            color: #3d919d;
+            font-size: 1.5rem;
             margin-bottom: 15px;
         }
 
-        /* Texto de las cajas inferiores */
-        .nav-box-label {
-            font-family: 'Public Sans', sans-serif;
-            font-weight: 700;
-            font-size: 12px;
-            color: var(--azul-descripcion);
+        .profile-description {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: #3d919d;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .profile-quote {
+            text-align: center;
+            margin-top: 40px;
+            color: #ffd943;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        /* Estilos para la Navegación de Botones (Footer) */
+        .bottom-nav {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto; /* Empuja hacia abajo */
+        }
+
+        .home-icon-bottom {
+            align-self: flex-start;
+            color: #f16161;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
             text-decoration: none;
+        }
+
+        .nav-boxes {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .nav-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            height: 180px;
+            background-color: transparent;
+            border: 1px solid #ffd943; /* Borde dorado */
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+
+        .nav-box:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-5px);
+        }
+
+        .nav-box i {
+            color: #ffd943; /* Color dorado de los iconos */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .nav-box span {
+            font-family: 'Public Sans', sans-serif;
+            color: #3d919d ; /* Color de texto azul de los menús */
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 300;
         }
 
     </style>
 </head>
 <body>
 
-    <div class="page-container">
+    <header>
+        <a href="index.html" class="home-icon-top"><i class="fas fa-home"></i></a>
+        
+        <h1 class="main-title">Portafolio</h1>
 
-        <header class="top-section">
-            <a href="#" class="home-icon"><i class="fa-solid fa-house"></i></a>
+        <nav class="top-nav">
+            <a href="curriculum.html">Curriculum</a>
+            <a href="portafolio.html">Portafolio</a>
+            <a href="contacto.html">Contáctame</a>
+        </nav>
+    </header>
 
-            <h1 class="main-title">Portafolio</h1>
-
-            <nav class="main-nav">
-                <a href="#curriculum">CURRICULUM</a>
-                <a href="#portafolio">PORTAFOLIO</a>
-                <a href="#contactame">CONTACTAME</a>
-            </nav>
-        </header>
-
-        <section class="profile-section">
-            <a href="#" class="home-icon"><i class="fa-solid fa-house"></i></a>
-
-            <div class="profile-illustration-container">
-                <span class="profile-script-text">Perfil</span>
-                <img src="" alt="Ilustración de perfil" class="profile-image">
+    <section class="profile-section">
+        <a href="index.html" class="home-icon-middle"><i class="fas fa-home"></i></a>
+        
+        <div class="profile-container">
+            <div class="profile-image-container">
+                <span class="profile-script-overlay">perfil</span>
+                <img src="https://i.ibb.co/3sX8M8H/Iran-Michelle-Profile.png" alt="Perfil de Irán Michelle Samaniego Pérez" class="profile-image">
             </div>
-
+            
             <div class="profile-text">
                 <h2 class="profile-name">Irán Michelle Samaniego Pérez</h2>
-                <div class="profile-description">
-                    Hola, soy Irán, estudiante de diseño con enfoque en creatividad visual y narrativa. Me gusta transformar ideas en conceptos visuales que comunican emociones y mensajes claros.<br><br>
+                <p class="profile-description">
+                    Hola, soy Irán, estudiante de diseño con enfoque en creatividad visual y narrativa. Me gusta transformar ideas en conceptos visuales que comuniquen emociones y mensajes claros.
+                </p>
+                <p class="profile-description">
                     Disfruto trabajar con ilustración, diseño digital y propuestas creativas que conecten con las personas.
-                </div>
-                <div class="tagline">LA CREATIVIDAD DE LA IMAGINACIÓN</div>
+                </p>
             </div>
-        </section>
+        </div>
 
-        <footer class="bottom-sections">
-            <a href="#" class="home-icon"><i class="fa-solid fa-house"></i></a>
+        <p class="profile-quote">LA CREATIVIDAD DE LA IMAGINACIÓN</p>
+    </section>
 
-            <a href="#proyectos" class="nav-box">
-                <i class="fa-solid fa-list-check nav-box-icon"></i> <span class="nav-box-label">Mis proyectos</span>
+    <footer class="bottom-nav">
+        <a href="index.html" class="home-icon-bottom"><i class="fas fa-home"></i></a>
+
+        <div class="nav-boxes">
+            <a href="portafolio.html" class="nav-box">
+                <i class="far fa-file-alt"></i> <span>Mis proyectos</span>
             </a>
 
-            <a href="#contactame" class="nav-box">
-                <span class="fa-stack nav-box-icon" style="font-size: 35px; width: 60px;"> <i class="fa-solid fa-globe fa-stack-2x"></i> <i class="fa-solid fa-link fa-stack-1x" style="color: var(--amarillo-iconos);"></i> </span>
-                <span class="nav-box-label">Contactame</span>
+            <a href="contacto.html" class="nav-box">
+                <i class="fas fa-globe"></i> <span>Contáctame</span>
             </a>
 
-            <a href="#sobremi" class="nav-box">
-                <i class="fa-solid fa-circle-user nav-box-icon"></i> <span class="nav-box-label">Sobre mi</span>
+            <a href="curriculum.html" class="nav-box">
+                <i class="far fa-user-circle"></i> <span>Sobre mí</span>
             </a>
-        </footer>
-
-    </div>
+        </div>
+    </footer>
 
 </body>
 </html>

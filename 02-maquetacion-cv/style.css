@@ -1,177 +1,157 @@
-/* 1. Importación de Tipografías */
-/* Nota: Noto Sans KR es la versión de Google para Source Han Sans KR */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap');
-
-/* 2. Variables de Color para fácil edición */
+/* --- CONFIGURACIÓN DE COLORES Y FUENTES --- */
 :root {
-    --bg-crema: #fdfcf6;
-    --azul-texto: #1f628e;
-    --dorado-bordes: #ffd943;
-    --rosa-home: #f16161;
-    --gris-suave: #3d919d;
-}
-
-/* 3. Configuración Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    --bg-beige: #fffcf6;
+    --azul-titulo: #1f628e;
+    --azul-texto: #3d919d;
+    --rojo-detalles: #f16161;
+    --amarillo-iconos: #ffd943;
+    --fuente-pinyon: 'Pinyon Script', cursive;
+    --fuente-public: 'Public Sans', sans-serif;
 }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: var(--bg-crema);
-    color: var(--azul-texto);
+    background-color: var(--bg-beige);
+    font-family: var(--fuente-public);
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 20px;
-    min-height: 100vh;
+    padding-top: 50px;
 }
 
-/* 4. Estilos de los Iconos de Casa (Home) */
-.home-icon {
-    color: var(--rosa-home);
-    font-size: 1.4rem;
-    text-decoration: none;
-    align-self: flex-start;
-    margin-bottom: 20px;
+/* --- CABECERA --- */
+.header-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-link img {
+    width: 35px; /* Ajusta el tamaño de la casita */
+    height: auto;
     transition: opacity 0.3s;
 }
 
-.home-icon:hover {
+.home-link:hover img {
     opacity: 0.7;
 }
 
-/* 5. Título Principal (Script) */
 .main-title {
-    font-family: 'Dancing Script', cursive; /* Estilo Beautifully Delicious */
-    font-size: 5rem;
-    font-weight: normal;
-    color: var(--azul-texto);
-    text-align: center;
-    margin-bottom: 30px;
+    font-family: var(--fuente-pinyon);
+    color: var(--azul-titulo);
+    font-size: 90px;
+    margin: 10px 0 30px 0;
+    font-weight: 400;
 }
 
-/* 6. Menú Superior (Botones Ovalados) */
-.top-nav {
+/* --- MENÚ SUPERIOR (Bordes amarillos) --- */
+.nav-menu {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 60px;
+    gap: 20px;
 }
 
-.top-nav a {
-    font-family: 'Noto Sans KR', sans-serif;
+.nav-item {
     text-decoration: none;
-    color: var(--azul-texto);
-    border: 1px solid var(--dorado-bordes);
-    padding: 8px 25px;
-    border-radius: 25px;
-    font-size: 0.85rem;
+    color: var(--azul-titulo);
+    font-size: 11px;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border: 1.8px solid var(--amarillo-iconos);
+    padding: 8px 25px;
+    border-radius: 25px;
     transition: all 0.3s ease;
 }
 
-.top-nav a:hover {
-    background-color: var(--dorado-bordes);
+.nav-item:hover {
+    background-color: var(--amarillo-iconos);
     color: white;
 }
 
-/* 7. Sección de Perfil */
-.profile-section {
-    width: 100%;
-    max-width: 850px;
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-content {
+/* --- SECCIÓN PERFIL --- */
+.profile-wrap {
     display: flex;
     align-items: center;
     gap: 40px;
+    max-width: 800px;
+    margin: 60px 0;
 }
 
-.image-wrapper {
+.img-container {
     position: relative;
-    flex: 0 0 220px;
 }
 
-.label-perfil {
-    position: absolute;
-    top: -15px;
-    left: -20px;
-    font-family: 'Dancing Script', cursive;
-    color: var(--dorado-bordes);
-    font-size: 1.8rem;
-    transform: rotate(-10deg);
-}
-
-.profile-img {
-    width: 100%;
+.img-container img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
     border-radius: 5px;
 }
 
+.perfil-tag {
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    font-family: var(--fuente-pinyon);
+    color: var(--amarillo-iconos);
+    font-size: 45px;
+    transform: rotate(-12deg);
+}
+
 .profile-info h2 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    font-weight: 500;
+    color: var(--azul-titulo);
+    font-weight: 300;
+    font-size: 28px;
+    margin: 0 0 15px 0;
 }
 
 .profile-info p {
-    color: var(--gris-suave);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 10px;
-    font-weight: 300;
+    color: var(--azul-texto);
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.slogan {
-    text-align: center;
-    margin: 50px 0;
-    color: var(--dorado-bordes);
+/* --- DECORACIÓN INTERMEDIA --- */
+.divider-text {
+    color: var(--amarillo-iconos);
+    font-weight: 800;
+    font-size: 10px;
     letter-spacing: 4px;
-    font-size: 0.75rem;
-    font-weight: bold;
+    margin-bottom: 40px;
 }
 
-/* 8. Menú de Cuadros Inferiores */
-.bottom-nav-container {
-    width: 100%;
-    max-width: 900px;
+/* --- TARJETAS INFERIORES (Rojas) --- */
+.cards-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 25px;
+    margin-bottom: 80px;
 }
 
-.nav-card {
-    flex: 1;
+.card {
+    width: 160px;
+    height: 160px;
+    border: 1.2px solid var(--rojo-detalles);
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 180px;
-    border: 1px solid var(--rosa-home); /* Borde rosa sutil como en la imagen */
-    border-radius: 12px;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
 
-.nav-card:hover {
-    transform: translateY(-5px);
-    background-color: #fffef9;
+.card:hover {
+    transform: translateY(-8px);
 }
 
-.nav-card i {
-    font-size: 2.5rem;
-    color: var(--dorado-bordes);
-    margin-bottom: 15px;
+.card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
-.nav-card span {
-    font-size: 0.8rem;
-    text-transform: capitalize;
+.card span {
     color: var(--azul-texto);
+    font-size: 13px;
+    font-weight: 400;
 }

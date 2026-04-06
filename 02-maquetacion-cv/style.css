@@ -1,17 +1,4 @@
-/* 1. Importación de Tipografías */
-/* Nota: Noto Sans KR es la versión de Google para Source Han Sans KR */
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap');
-
-/* 2. Variables de Color para fácil edición */
-:root {
-    --bg-crema: #fdfcf6;
-    --azul-texto: #1f628e;
-    --dorado-bordes: #ffd943;
-    --rosa-home: #f16161;
-    --gris-suave: #3d919d;
-}
-
-/* 3. Configuración Base */
+/* --- ESTILOS GENERALES Y RESETEADO --- */
 * {
     margin: 0;
     padding: 0;
@@ -19,159 +6,253 @@
 }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-color: var(--bg-crema);
-    color: var(--azul-texto);
+    background-color: #fffcf6; /* Fondo color crema muy claro */
+    color: #3d919d; /* Color de texto azul grisáceo (para la mayoría de textos) */
+    
+    /* Tipografía base y la requerida para los menús */
+    /* Noto Sans KR es muy similar visualmente a Source Han Sans KR y está disponible en Google Fonts */
+    font-family: 'Noto Sans KR', sans-serif; 
+    
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
     min-height: 100vh;
+    overflow-x: hidden;
+    padding: 20px; /* Padding general para que nada toque los bordes en móvil */
+}
+
+a {
+    text-decoration: none; /* Eliminar subrayados de enlaces por defecto */
+    color: inherit; /* Heredar color del padre */
+}
+
+/* --- HEADER / NAVEGACIÓN SUPERIOR --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.home-link {
+    display: block;
 }
 
 /* 4. Estilos de los Iconos de Casa (Home) */
 .home-icon {
-    color: var(--rosa-home);
-    font-size: 1.4rem;
-    text-decoration: none;
-    align-self: flex-start;
-    margin-bottom: 20px;
-    transition: opacity 0.3s;
+    width: 30px; /* Ajusta el tamaño de la casa */
+    height: auto;
 }
 
-.home-icon:hover {
-    opacity: 0.7;
+.nav-links {
+    display: flex;
+    gap: 15px; /* Espacio entre los botones */
 }
 
-/* 5. Título Principal (Script) */
-.main-title {
-    font-family: 'Dancing Script', cursive; /* Estilo Beautifully Delicious */
-    font-size: 5rem;
-    font-weight: normal;
-    color: var(--azul-texto);
+.nav-links a {
+    font-size: 14px;
+    font-weight: 400; /* Peso de fuente normal para el menú */
+    color: #3d919d; /* Color gris suave para los enlaces */
+    
+    /* Estilo visual de botón de píldora */
+    padding: 6px 18px;
+    border: 1px solid #F8D06B; /* Borde amarillo muy suave */
+    border-radius: 50px; /* Botón redondeado */
+    
+    transition: background-color 0.3sease, border-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #F8D06B; /* Fondo amarillo al pasar el ratón */
+    border-color: #F8D06B;
+}
+
+.nav-links a.active {
+    background-color: #F8D06B; /* Fondo amarillo para el enlace 'activo' */
+    border-color: #F8D06B;
+    font-weight: 500; /* Un poco más de peso */
+}
+
+/* --- TÍTULO PRINCIPAL CURSIVO ("PORTAFOLIO") --- */
+.main-title-section {
     text-align: center;
-    margin-bottom: 30px;
+    padding: 40px 0;
 }
 
-/* 6. Menú Superior (Botones Ovalados) */
-.top-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 60px;
+.main-title {
+    /* Tipografía Cursiva Elegante */
+    font-family: 'Pinyon Script', cursive; 
+    font-size: 110px; /* Tamaño muy grande */
+    font-weight: 400; /* Peso ligero, estilo caligráfico */
+    
+    color: #1f628e; /* Color azul oscuro y profundo */
+    
+    margin: 0;
+    line-height: 1; /* Ajustar altura de línea */
 }
 
-.top-nav a {
-    font-family: 'Noto Sans KR', sans-serif;
-    text-decoration: none;
-    color: var(--azul-texto);
-    border: 1px solid var(--dorado-bordes);
-    padding: 8px 25px;
-    border-radius: 25px;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+/* --- SECCIÓN INTRODUCCIÓN PERSONAL --- */
+.intro-section {
+    padding: 40px 0;
 }
 
-.top-nav a:hover {
-    background-color: var(--dorado-bordes);
-    color: white;
-}
-
-/* 7. Sección de Perfil */
-.profile-section {
-    width: 100%;
-    max-width: 850px;
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-content {
+.intro-container {
     display: flex;
     align-items: center;
-    gap: 40px;
-}
-
-.image-wrapper {
-    position: relative;
-    flex: 0 0 220px;
-}
-
-.label-perfil {
-    position: absolute;
-    top: -15px;
-    left: -20px;
-    font-family: 'Dancing Script', cursive;
-    color: var(--dorado-bordes);
-    font-size: 1.8rem;
-    transform: rotate(-10deg);
-}
-
-.profile-img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.profile-info h2 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-.profile-info p {
-    color: var(--gris-suave);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.slogan {
-    text-align: center;
-    margin: 50px 0;
-    color: var(--dorado-bordes);
-    letter-spacing: 4px;
-    font-size: 0.75rem;
-    font-weight: bold;
-}
-
-/* 8. Menú de Cuadros Inferiores */
-.bottom-nav-container {
-    width: 100%;
+    justify-content: center;
+    gap: 40px; /* Espacio entre imagen y texto */
     max-width: 900px;
+    margin: 0 auto;
+}
+
+.avatar-container {
+    flex-shrink: 0; /* Evitar que la imagen se encoja */
+}
+
+.avatar-img {
+    width: 250px; /* Ajustar tamaño de la ilustración */
+    height: auto;
+    border-radius: 10px; /* Un pequeño radio para suavizar los bordes si hay fondo */
+}
+
+.intro-text h2 {
+    font-size: 30px;
+    font-weight: 400; /* Peso más ligero, como en la imagen */
+    color:#3d919d; /* Color azul más claro para el nombre */
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* --- SECCIÓN DE LA CITA (VERSÍCULO) --- */
+.quote-section {
+    text-align: center;
+    padding: 30px 0;
+    margin: 20px 0;
+}
+
+.bible-quote {
+    color: #F8D06B; /* Color amarillo brillante para la cita */
+    font-size: 15px;
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Todo en mayúsculas */
+}
+
+.bible-quote cite {
+    display: block; /* Mover la cita a una nueva línea */
+    font-size: 13px;
+    font-style: normal; /* No cursiva para la cita */
+    margin-top: 10px;
+}
+
+/* --- SECCIÓN DE TARJETAS DE MENÚ INFERIOR --- */
+.footer-nav {
+    flex-grow: 1; /* Ocupar el resto del espacio disponible */
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px; /* Espacio inferior */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre tarjetas */
+    width: 100%;
+    max-width: 1000px;
 }
 
 .nav-card {
-    flex: 1;
+    background-color: #fffcf6; /* Fondo blanco crema muy suave para las tarjetas */
+    width: 30%; /* Tamaño proporcional */
+    min-width: 250px; /* Tamaño mínimo */
+    height: 250px; /* Altura fija para que sean cuadradas */
+    
+    border-radius: 20px; /* Esquinas muy redondeadas */
+    
+    /* Borde suave en color rosado/rojo muy pálido, como la imagen */
+    border: 1px solid #f16161; 
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 180px;
-    border: 1px solid var(--rosa-home); /* Borde rojo sutil como en la imagen */
-    border-radius: 12px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 30px;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+/* Efecto de elevación al pasar el ratón por las tarjetas */
 .nav-card:hover {
-    transform: translateY(-5px);
-    background-color: #fffcf6;
+    transform: translateY(-5px); /* Subir un poco */
+    box-shadow: 0 10px 20px #0000000d; /* Sombra suave */
+    border-color: #ffd943; /* Borde más visible */
 }
 
-.nav-card i {
-    font-size: 2.5rem;
-    color: var(--dorado-bordes);
-    margin-bottom: 15px;
+.card-icon {
+    width: 80px; /* Tamaño del contenedor del icono */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
-.nav-card span {
-    font-size: 0.8rem;
-    text-transform: capitalize;
-    color: var(--azul-texto);
+.card-icon img {
+    width: 100%; /* El icono llena su contenedor */
+    height: auto;
+    filter: invert(75%) sepia(35%) saturate(800%) hue-rotate(5deg) brightness(110%) contrast(100%); /* Efecto CSS para colorear iconos negros/oscuros a amarillo si no tienes imágenes amarillas */
+}
+
+.nav-card h3 {
+    font-size: 16px;
+    font-weight: 400; /* Peso normal */
+    color: #3d919d; /* Color de texto azul grisáceo */
+}
+
+/* --- RESPONSIVIDAD (Ajustes para móviles) --- */
+@media (max-width: 800px) {
+    .header {
+        flex-direction: column; /* Apilar casa y menú */
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap; /* Permitir que los botones bajen */
+        justify-content: center;
+    }
+
+    .main-title {
+        font-size: 70px; /* Título más pequeño en móvil */
+    }
+
+    .intro-container {
+        flex-direction: column; /* Apilar imagen y texto */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .intro-text h2 {
+        font-size: 24px;
+    }
+
+    .card-container {
+        flex-direction: column; /* Apilar tarjetas */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-card {
+        width: 100%; /* Tarjetas a ancho completo */
+        max-width: 400px;
+        height: auto; /* Altura automática basándose en contenido */
+        padding: 40px;
+    }
 }

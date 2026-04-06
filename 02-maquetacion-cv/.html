@@ -3,269 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de Irán Michelle</title>
+    <title>Portafolio - Irán Michelle Samaniego Pérez</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <style>
-        /* Estilos Generales - Reseteo y Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Noto Sans KR', sans-serif; /* Tipografía para el texto del cuerpo */
-            background-color: #fdfcf6; /* Color de fondo crema pálido */
-            color: #3d919d;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 40px;
-        }
-
-        /* Estilos para el Encabezado (Header) */
-        header {
-            width: 100%;
-            max-width: 1200px;
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative; /* Para posicionar la casa absoluta */
-        }
-
-        .home-icon-top {
-            position: absolute;
-            top: 0;
-            left: 0;
-            color: #f16161; /* Color rojo suave para la casa */
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-
-        .main-title {
-            font-family: 'Dancing Script', cursive; /* Tipografía Script Hermosa y Deliciosa */
-            font-size: 5rem; /* Ajuste para un aspecto grande pero quieto */
-            color: #1f628e; /* Color azul polvoriento */
-            font-weight: normal; /* "Estilo quieto" - no audaz */
-            margin-bottom: 30px;
-            margin-top: 10px; /* Separación de la casa */
-        }
-
-        /* Menú Superior */
-        .top-nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .top-nav a {
-            font-family: 'Noto Sans KR', sans-serif; /* Tipografía específica solicitada */
-            font-weight: 300; /* Peso ligero para que coincida */
-            color: #3d919d;
-            text-decoration: none;
-            padding: 8px 15px;
-            border: 1px solid #ffd943; /* Color amarillo apagado para el borde */
-            border-radius: 20px; /* Bordes redondeados */
-            font-size: 0.8rem;
-            text-transform: uppercase; /* Todo en mayúsculas como en la imagen */
-            transition: all 0.3s ease;
-        }
-
-        .top-nav a:hover {
-            background-color: #ffd943;
-            color: white;
-        }
-
-        /* Estilos para la sección de Perfil */
-        .profile-section {
-            width: 100%;
-            max-width: 900px;
-            margin-bottom: 60px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-
-        .profile-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-        }
-
-        .profile-image-container {
-            flex: 0 0 200px; /* Ancho fijo para el contenedor de la imagen */
-            position: relative;
-        }
-
-        .profile-script-overlay {
-            font-family: 'Dancing Script', cursive;
-            position: absolute;
-            top: -20px;
-            left: -30px;
-            font-size: 1.5rem;
-            color: #ffd943; /* Color amarillo */
-            opacity: 0.6;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .profile-text {
-            flex: 1;
-            text-align: left;
-        }
-
-        .profile-name {
-            font-family: 'Noto Sans KR', sans-serif;
-            font-weight: 700;
-            color: #3d919d;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-
-        .profile-description {
-            font-size: 0.8rem;
-            line-height: 1.6;
-            color: #3d919d;
-            margin-bottom: 10px;
-            font-weight: 300;
-        }
-
-        .profile-quote {
-            text-align: center;
-            margin-top: 40px;
-            color: #ffd943;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.7rem;
-            font-weight: bold;
-            width: 100%;
-        }
-
-        /* Estilos para la Navegación de Botones (Footer) */
-        .bottom-nav {
-            width: 100%;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: auto; /* Empuja hacia abajo */
-        }
-
-        .home-icon-bottom {
-            align-self: flex-start;
-            color: #f16161;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            text-decoration: none;
-        }
-
-        .nav-boxes {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .nav-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 250px;
-            height: 180px;
-            background-color: transparent;
-            border: 1px solid #ffd943; /* Borde amarillo */
-            border-radius: 10px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            padding: 20px;
-        }
-
-        .nav-box:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transform: translateY(-5px);
-        }
-
-        .nav-box i {
-            color: #ffd943; /* Color amarillo de los iconos */
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .nav-box span {
-            font-family: 'Noto Sans KR', sans-serif;
-            color: #3d919d; /* Color de texto azul de los menús */
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 300;
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="home-icon-top"><i class="fas fa-home"></i></a>
+    <header class="header">
+        <a href="index.html" class="home-link">
+            <img src="images/home-icon.png" alt="Inicio" class="home-icon">
+        </a>
         
-        <h1 class="main-title">Portafolio</h1>
-
-        <nav class="top-nav">
+        <nav class="nav-links">
             <a href="curriculum.html">Curriculum</a>
-            <a href="portafolio.html">Portafolio</a>
+            <a href="portafolio.html" class="active">Portafolio</a>
             <a href="contacto.html">Contáctame</a>
         </nav>
     </header>
 
-    <section class="profile-section">
-        <a href="index.html" class="home-icon-middle"><i class="fas fa-home"></i></a>
-        
-        <div class="profile-container">
-            <div class="profile-image-container">
-                <span class="profile-script-overlay">perfil</span>
-                <img src="https://i.ibb.co/3sX8M8H/Iran-Michelle-Profile.png" alt="Perfil de Irán Michelle Samaniego Pérez" class="profile-image">
-            </div>
-            
-            <div class="profile-text">
-                <h2 class="profile-name">Irán Michelle Samaniego Pérez</h2>
-                <p class="profile-description">
-                    Hola, soy Irán, estudiante de diseño con enfoque en creatividad visual y narrativa. Me gusta transformar ideas en conceptos visuales que comuniquen emociones y mensajes claros.
-                </p>
-                <p class="profile-description">
-                    Disfruto trabajar con ilustración, diseño digital y propuestas creativas que conecten con las personas.
-                </p>
-            </div>
-        </div>
-
-        <p class="profile-quote">LA CREATIVIDAD DE LA IMAGINACIÓN</p>
+    <section class="main-title-section">
+        <h1 class="main-title">Portafolio</h1>
     </section>
 
-    <footer class="bottom-nav">
-        <a href="index.html" class="home-icon-bottom"><i class="fas fa-home"></i></a>
-
-        <div class="nav-boxes">
-            <a href="portafolio.html" class="nav-box">
-                <i class="far fa-file-alt"></i> <span>Mis proyectos</span>
-            </a>
-
-            <a href="contacto.html" class="nav-box">
-                <i class="fas fa-globe"></i> <span>Contáctame</span>
-            </a>
-
-            <a href="curriculum.html" class="nav-box">
-                <i class="far fa-user-circle"></i> <span>Sobre mí</span>
-            </a>
+    <section class="intro-section">
+        <div class="intro-container">
+            <div class="avatar-container">
+                <img src="images/avatar.png" alt="Ilustración de Irán Michelle" class="avatar-img">
+            </div>
+            
+            <div class="intro-text">
+                <h2>Irán Michelle Samaniego Pérez</h2>
+                <p>Hola, soy Irán, estudiante de diseño con enfoque en creatividad visual y narrativa. Me gusta transformar ideas en conceptos visuales que comunican emociones y mensajes claros.</p>
+                <p>Disfruto trabajar con ilustración, diseño digital y propuestas creativas que conecten con las personas.</p>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="quote-section">
+        <blockquote class="bible-quote">
+            "Toda buena dádiva y todo don perfecto desciende de lo alto..."
+            <cite>Santiago 1:17</cite>
+        </blockquote>
+    </section>
+
+    <section class="footer-nav">
+        <div class="card-container">
+            
+            <a href="portafolio.html" class="nav-card">
+                <div class="card-icon">
+                    <img src="images/icon-proyectos.png" alt="Icono Proyectos">
+                </div>
+                <h3>Mis proyectos</h3>
+            </a>
+
+            <a href="contacto.html" class="nav-card">
+                <div class="card-icon">
+                    <img src="images/icon-contacto.png" alt="Icono Contacto">
+                </div>
+                <h3>Contáctame</h3>
+            </a>
+
+            <a href="curriculum.html" class="nav-card">
+                <div class="card-icon">
+                    <img src="images/icon-sobremi.png" alt="Icono Sobre mí">
+                </div>
+                <h3>Sobre mí</h3>
+            </a>
+
+        </div>
+    </section>
 
 </body>
 </html>

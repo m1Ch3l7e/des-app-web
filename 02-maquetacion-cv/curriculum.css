@@ -1,6 +1,6 @@
 :root {
-    --gold: #fbdc8d;
-    --dark-blue: #2c4a5e;
+    --gold: #fffcf6;
+    --dark-blue: #4d84a9;
     --light-blue: #4a748c;
 }
 
@@ -11,17 +11,17 @@
 }
 
 body {
-    height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    /* Degradado de fondo idéntico */
-    background: linear-gradient(to bottom, #1d3344 0%, #3e6681 50%, #f0f4f7 95%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    overflow: hidden;
-    position: relative;
+   .main-title {
+    font-family: 'BeautifullyDelicious', cursive;
+    font-size: 10rem; /* Ajusta el tamaño según prefieras */
+    color: #fbdc8d; /* El dorado de la imagen */
+    text-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+    
+    /* Efecto flotante */
+    display: inline-block;
+    animation: flotar 4s ease-in-out infinite;
 }
+
 
 /* Navegación superior */
 .navbar {

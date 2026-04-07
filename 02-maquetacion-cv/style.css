@@ -29,7 +29,7 @@ header {
     position: fixed; /* La casa se queda quieta arriba a la izquierda al bajar */
     left: 40px;
     top: 40px;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     color: #f16161;
     z-index: 100; /* Para que siempre esté encima */
     transition: 0.3s;
@@ -63,7 +63,7 @@ header {
     font-size: 18px;
     letter-spacing: 3px;
     transition: 0.3s;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .top-nav a:hover {
@@ -89,21 +89,21 @@ header {
 }
 
 .profile-image {
-    width: 400px; /* Imagen más grande */
+    width: 300px; /* Imagen más grande */
     height: auto;
     box-shadow: 20px 20px 0px #ffd943; /* Efecto decorativo */
 }
 
 .profile-text h2 {
-    font-size: 55px;
+    font-size: 45px;
     margin-bottom: 35px;
     color: #1f628e;
 }
 
 .profile-text p {
-    font-size: 22px;
-    margin-bottom: 25px;
-    line-height: 1.9;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
     max-width: 750px;
 }
 
@@ -112,8 +112,8 @@ header {
     text-align: center;
     padding: 250px 20px; /* Mucho aire alrededor de la frase */
     color: #ffd943;
-    font-size: 24px;
-    letter-spacing: 6px;
+    font-size: 23px;
+    letter-spacing: 7px;
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;

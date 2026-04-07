@@ -91,7 +91,7 @@ header {
 .profile-image {
     width: 300px; /* Imagen más grande */
     height: auto;
-    box-shadow: 20px 20px 0px #ffd943; /* Efecto decorativo */
+    box-shadow: 20px 20px 0px #ffd94326; /* Efecto decorativo */
 }
 
 .profile-text h2 {
@@ -144,7 +144,7 @@ header {
 
 .nav-box:hover {
     transform: translateY(-20px);
-    box-shadow: 0 25px 50px rgba(255, 217, 67, 0.15);
+    box-shadow: 0 25px 50px #ffd94326;
 }
 
 .nav-box i {

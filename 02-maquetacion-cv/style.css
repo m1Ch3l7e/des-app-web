@@ -12,26 +12,26 @@ body {
     line-height: 1.6;
 }
 
-/* HEADER */
+/* HEADER - Espaciado superior e inferior masivo */
 header {
     position: relative;
     text-align: center;
-    padding: 120px 30px 180px 30px; 
-    min-height: 50vh; /* Aumentado para que el título respire más */
+    padding: 100px 30px 150px 30px; /* Mucho más espacio abajo del título */
+    min-height: 40vh; /* Ocupa casi la mitad de la pantalla al entrar */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* CASA - Estilo fijo */
+/* CASA */
 .home-icon {
-    position: fixed; 
+    position: fixed; /* La casa se queda quieta arriba a la izquierda al bajar */
     left: 40px;
     top: 40px;
-    font-size: 3rem; /* Más grande */
+    font-size: 2.5rem;
     color: #f16161;
-    z-index: 100;
+    z-index: 100; /* Para que siempre esté encima */
     transition: 0.3s;
 }
 
@@ -39,31 +39,31 @@ header {
     transform: scale(1.2);
 }
 
-/* TITULO PRINCIPAL - El gran protagonista */
+/* TITULO PRINCIPAL */
 .main-title {
     font-family: 'Pinyon Script', cursive;
-    font-size: 200px; /* Subió de 160px a 200px */
+    font-size: 160px; /* Un poco más grande */
     color: #1f628e;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 /* BOTONES SUPERIORES */
 .top-nav {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .top-nav a {
     display: inline-block;
-    margin: 0 25px;
-    padding: 20px 60px; /* Botones más robustos */
-    border: 3px solid #ffd943; /* Borde un poco más grueso */
-    border-radius: 60px;
+    margin: 0 20px;
+    padding: 15px 50px;
+    border: 2px solid #ffd943;
+    border-radius: 50px;
     text-decoration: none;
     color: #3d919d;
-    font-size: 22px; /* Subió de 18px a 22px */
-    letter-spacing: 4px;
+    font-size: 18px;
+    letter-spacing: 3px;
     transition: 0.3s;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .top-nav a:hover {
@@ -71,49 +71,49 @@ header {
     color: white;
 }
 
-/* SECCIÓN PERFIL */
+/* SECCIÓN PERFIL - Espaciado vertical gigante */
 .profile-section {
-    padding: 250px 50px; 
+    padding: 200px 50px; /* 200px de separación arriba y abajo */
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.3); /* Ligera diferencia de fondo */
 }
 
 .profile-container {
     display: flex;
-    gap: 140px; 
-    max-width: 1400px; /* Un poco más ancho */
-    width: 95%;
+    gap: 120px; /* Más espacio entre imagen y texto */
+    max-width: 1300px;
+    width: 90%;
     align-items: center;
 }
 
 .profile-image {
-    width: 500px; /* Subió de 400px a 500px */
+    width: 400px; /* Imagen más grande */
     height: auto;
-    box-shadow: 25px 25px 0px #ffd943; 
+    box-shadow: 20px 20px 0px #ffd943; /* Efecto decorativo */
 }
 
 .profile-text h2 {
-    font-size: 70px; /* Subió de 55px a 70px */
-    margin-bottom: 40px;
+    font-size: 55px;
+    margin-bottom: 35px;
     color: #1f628e;
-    line-height: 1.1;
 }
 
 .profile-text p {
-    font-size: 28px; /* Subió de 22px a 28px */
-    margin-bottom: 30px;
-    line-height: 1.8;
-    max-width: 850px; /* Permitimos que el texto se extienda un poco más */
+    font-size: 22px;
+    margin-bottom: 25px;
+    line-height: 1.9;
+    max-width: 750px;
 }
 
-/* FRASE / CITA */
+/* FRASE / CITA - Separación extrema */
 .profile-quote {
     text-align: center;
-    padding: 300px 20px; 
+    padding: 250px 20px; /* Mucho aire alrededor de la frase */
     color: #ffd943;
-    font-size: 32px; /* Subió de 24px a 32px */
-    letter-spacing: 8px;
+    font-size: 24px;
+    letter-spacing: 6px;
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
@@ -123,15 +123,16 @@ header {
 .nav-boxes {
     display: flex;
     justify-content: center;
-    gap: 80px;
-    padding: 150px 20px 250px 20px; 
+    gap: 60px;
+    padding: 150px 20px 200px 20px; /* Espacio final de la página */
+    background: #fffcf6;
 }
 
 .nav-box {
-    width: 380px; /* Más anchos */
-    height: 320px; /* Más altos */
-    border: 3px solid #ffd943;
-    border-radius: 40px;
+    width: 320px;
+    height: 280px;
+    border: 2px solid #ffd943;
+    border-radius: 30px;
     text-decoration: none;
     text-align: center;
     display: flex;
@@ -142,17 +143,18 @@ header {
 }
 
 .nav-box:hover {
-    transform: translateY(-25px);
+    transform: translateY(-20px);
+    box-shadow: 0 25px 50px rgba(255, 217, 67, 0.15);
 }
 
 .nav-box i {
-    font-size: 110px; /* Iconos más grandes */
+    font-size: 90px;
     color: #ffd943;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .nav-box span {
-    font-size: 24px; /* Subió de 20px a 24px */
+    font-size: 20px;
     color: #3d919d;
-    font-weight: 600;
+    font-weight: 500;
 }

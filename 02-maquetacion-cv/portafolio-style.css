@@ -1,6 +1,4 @@
-/* =========================================
-   1. RESET Y CONFIGURACIÓN BASE
-   ========================================= */
+/* 1 Reset y configuración base */
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +12,7 @@ body {
     line-height: 1.6;
 }
 
-/* =========================================
-   2. HEADER Y NAVEGACIÓN
-   ========================================= */
+/* 2 Header y Navegación */
 header {
     text-align: center;
     padding: 100px 20px;
@@ -24,18 +20,18 @@ header {
 
 .home-icon {
     position: fixed;
-    left: 40px;
-    top: 40px;
-    font-size: 2.0rem;
-    color: #f16161; /* Coral oficial */
+    left: 30px;
+    top: 30px;
+    font-size: 1.5rem;
+    color: #f16161; /* Rojo oficial */
     text-decoration: none;
     z-index: 100;
 }
 
 .main-title {
     font-family: 'Pinyon Script', cursive;
-    font-size: 160px; /* Tamaño unificado */
-    color: #1f628e; /* Azul oscuro oficial */
+    font-size: 160px; /* Tamaño */
+    color: #1f628e; /* Azul oscuro */
     margin-bottom: 20px;
 }
 
@@ -51,9 +47,7 @@ header {
     color: #3d919d;
 }
 
-/* =========================================
-   3. ESTRUCTURA DE SECCIONES (TÍTULO LATERAL)
-   ========================================= */
+/* 3 Titulos laterales*/
 .section-block {
     display: flex;
     max-width: 1800px; /* Un poco más ancho para las 4 columnas */
@@ -69,13 +63,13 @@ header {
 
 .script-title {
     font-family: 'Pinyon Script', cursive;
-    font-size: 70px; /* Tamaño unificado */
+    font-size: 60px; /* Tamaño unificado */
     color: #1f628e;
     line-height: 0.8;
 }
 
 .flat-title {
-    font-size: 20px;
+    font-size: 15px;
     color: #ffd943;
     letter-spacing: 2px;
     font-weight: 600;
@@ -89,9 +83,7 @@ header {
     line-height: 1.5;
 }
 
-/* =========================================
-   REJILLA ESPECÍFICA PARA ILUSTRACIÓN
-   ========================================= */
+/* Ilustración */
 
 /* Contenedor principal para que los proyectos fluyan correctamente */
 .section-block .portfolio-grid-ilustration {
@@ -287,12 +279,20 @@ header {
     padding: 20px 0;
 }
 
+/* Logo Hannis */
 .logo-hannis {
     width: 100%;
-    max-width: 400px; /* Tamaño del el logo principal */
+    max-width: 350px; /* Tamaño controlado */
     height: auto;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.05));
-    border-radius: 5px;
+    transition: all 0.4s ease; /* Transición suave */
+    cursor: pointer;          /* Cursor de mano */
+}
+
+/* Efecto de Zoom para el logo principal */
+.logo-hannis:hover {
+    transform: scale(1.05); /* Crece sutilmente */
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1)); /* Sombra más intensa */
 }
 
 .logo-row {
@@ -301,10 +301,6 @@ header {
     flex-wrap: wrap;
     align-items: center;
 }    
-
-.logo-round:hover {
-    transform: scale(1.1);
-}
 
 .logo-round {
     width: 110px;
@@ -320,6 +316,27 @@ header {
 .logo-round:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+
+.logo-group {
+    margin-bottom: 80px; /* Aumenta este número para más separación */
+    display: block;
+    width: 100%;
+}
+
+.logo-category {
+    color: #f16161; /* Color coral de tus capturas */
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px; /* Espacio entre el título y sus logos */
+    font-weight: 600;
+}
+
+.logo-row {
+    display: flex;
+    gap: 20px; /* Espacio horizontal entre cada círculo */
+    flex-wrap: wrap;
+}
 }
 
 /*6. ULTIMA LINEA*/

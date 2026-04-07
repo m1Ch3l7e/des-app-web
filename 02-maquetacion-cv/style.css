@@ -27,9 +27,9 @@ header {
 /* CASA */
 .home-icon {
     position: fixed; /* La casa se queda quieta arriba a la izquierda al bajar */
-    left: 40px;
-    top: 40px;
-    font-size: 2.0rem;
+    left: 30px;
+    top: 30px;
+    font-size: 1.5rem;
     color: #f16161;
     z-index: 100; /* Para que siempre esté encima */
     transition: 0.3s;

@@ -20,9 +20,9 @@ header {
 
 .home-icon {
     position: fixed;
-    left: 40px;
-    top: 40px;
-    font-size: 2.0rem;
+    left: 30px;
+    top: 30px;
+    font-size: 1.5rem;
     color: #f16161; /* Rojo oficial */
     text-decoration: none;
     z-index: 100;

@@ -1,0 +1,115 @@
+/* RESET GENERAL BASADO EN TU CV */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fffcf6; /* Fondo crema oficial */
+    font-family: 'Inter', sans-serif;
+    color: #3d919d; /* Azul acero oficial */
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.home-icon {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    font-size: 1.5rem;
+    color: #f16161; /* Rojo oficial */
+    text-decoration: none;
+    z-index: 100;
+}
+
+.main-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 160px; /* Tamaño unificado con CV y Portafolio */
+    color: #1f628e; /* Azul oscuro oficial */
+    margin-bottom: 100px;
+}
+
+/* CONTENEDOR DE TARJETAS */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 100px auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Para que se vea bien en móviles */
+}
+
+/* Quitar el subrayado y mantener los colores originales en los links */
+.contact-link {
+    text-decoration: none;
+    display: block; /* Para que el enlace ocupe todo el tamaño de la tarjeta */
+    flex: 1;
+    max-width: 350px;
+}
+
+/* Asegurar que el color del texto no cambie al ser un link */
+.contact-link:visited {
+    color: inherit;
+}
+
+/* ESTILO DE LAS TARJETAS AMARILLAS */
+.contact-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    height: 350px;
+    border: 2px solid #ffd943; /* Borde dorado oficial */
+    border-radius: 25px; /* Bordes muy redondeados según imagen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: transparent;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px); /* Pequeño efecto al pasar el mouse */
+}
+
+/* ICONOS DENTRO DE LAS TARJETAS */
+.contact-icon {
+    font-size: 80px;
+    color: #ffd943; /* Color amarillo de tu diseño */
+    margin-bottom: 40px;
+}
+
+/* TEXTO DE CONTACTO */
+.contact-data {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3d919d;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* AJUSTES PARA CELULARES */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 80px;
+    }
+    .contact-card {
+        height: 250px;
+    }
+}

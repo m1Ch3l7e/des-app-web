@@ -1,0 +1,160 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fffcf6;
+    font-family: 'Inter', sans-serif;
+    color: #3d919d;
+    line-height: 1.6;
+}
+
+/* HEADER - Espaciado superior e inferior masivo */
+header {
+    position: relative;
+    text-align: center;
+    padding: 100px 30px 150px 30px; /* Mucho más espacio abajo del título */
+    min-height: 40vh; /* Ocupa casi la mitad de la pantalla al entrar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CASA */
+.home-icon {
+    position: fixed; /* La casa se queda quieta arriba a la izquierda al bajar */
+    left: 30px;
+    top: 30px;
+    font-size: 1.5rem;
+    color: #f16161;
+    z-index: 100; /* Para que siempre esté encima */
+    transition: 0.3s;
+}
+
+.home-icon:hover {
+    transform: scale(1.2);
+}
+
+/* TITULO PRINCIPAL */
+.main-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 160px; /* Un poco más grande */
+    color: #1f628e;
+    margin-bottom: 40px;
+}
+
+/* BOTONES SUPERIORES */
+.top-nav {
+    margin-top: 20px;
+}
+
+.top-nav a {
+    display: inline-block;
+    margin: 0 20px;
+    padding: 15px 50px;
+    border: 2px solid #ffd943;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #3d919d;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: 0.3s;
+    font-weight: 400;
+}
+
+.top-nav a:hover {
+    background: #ffd943;
+    color: white;
+}
+
+/* SECCIÓN PERFIL - Espaciado vertical gigante */
+.profile-section {
+    padding: 200px 50px; /* 200px de separación arriba y abajo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3); /* Ligera diferencia de fondo */
+}
+
+.profile-container {
+    display: flex;
+    gap: 120px; /* Más espacio entre imagen y texto */
+    max-width: 1300px;
+    width: 90%;
+    align-items: center;
+}
+
+.profile-image {
+    width: 300px; /* Imagen más grande */
+    height: auto;
+    box-shadow: 20px 20px 0px #ffd94326; /* Efecto decorativo */
+}
+
+.profile-text h2 {
+    font-size: 45px;
+    margin-bottom: 35px;
+    color: #1f628e;
+}
+
+.profile-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 750px;
+}
+
+/* FRASE / CITA - Separación extrema */
+.profile-quote {
+    text-align: center;
+    padding: 250px 20px; /* Mucho aire alrededor de la frase */
+    color: #ffd943;
+    font-size: 23px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+}
+
+/* SECCIÓN DE CARDS INFERIORES */
+.nav-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 150px 20px 200px 20px; /* Espacio final de la página */
+    background: #fffcf6;
+}
+
+.nav-box {
+    width: 320px;
+    height: 280px;
+    border: 2px solid #ffd943;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.nav-box:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 25px 50px #ffd94326;
+}
+
+.nav-box i {
+    font-size: 90px;
+    color: #ffd943;
+    margin-bottom: 30px;
+}
+
+.nav-box span {
+    font-size: 20px;
+    color: #3d919d;
+    font-weight: 500;
+}

@@ -1,4 +1,4 @@
-/* 1 Reset y configuración base */
+/* Reset General */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +6,13 @@
 }
 
 body {
-    background: #fffcf6; /* Fondo crema */
+    background: #fffcf6;
     font-family: 'Inter', sans-serif;
-    color: #3d919d; /* Azul acero */
+    color: #3d919d;
     line-height: 1.6;
 }
 
-/* 2 Header y Navegación */
+/* HEADER Y NAVEGACIÓN */
 header {
     text-align: center;
     padding: 100px 20px;
@@ -23,342 +23,119 @@ header {
     left: 30px;
     top: 30px;
     font-size: 1.5rem;
-    color: #f16161; /* Rojo */
+    color: #f16161;
     text-decoration: none;
     z-index: 100;
 }
 
 .main-title {
     font-family: 'Pinyon Script', cursive;
-    font-size: 160px; /* Tamaño */
-    color: #1f628e; /* Azul oscuro */
-    margin-bottom: 20px;
+    font-size: 160px;
+    color: #1f628e;
+    margin-bottom: 50px;
 }
 
-.mis-trabajos-tag {
-    position: relative;
-    border: 2px solid #ffd943; /* Amarillo oficial */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.top-nav span {
+    border: 2px solid #ffd943;
     padding: 10px 30px;
     border-radius: 30px;
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 500;
-    color: #3d919d;
 }
 
-/* 3 Titulos laterales*/
-.section-block {
+/* Estructura del curiculum por sección */
+.cv-section {
     display: flex;
-    max-width: 1800px; /* Un poco más ancho para las 4 columnas */
-    margin: 80px auto;
+    max-width: 1200px;
+    margin: 100px auto;
     padding: 0 40px;
-    gap: 60px;
+    gap: 80px;
 }
 
-.header-combination {
-    flex: 0 0 250px; /* Ancho del título lateral */
-    text-align: left;
-}
-
-.script-title {
+.side-title {
     font-family: 'Pinyon Script', cursive;
-    font-size: 60px; /* Tamaño unificado */
+    font-size: 90px;
     color: #1f628e;
+    flex: 0 0 300px;
+    text-align: right;
     line-height: 0.8;
 }
 
-.flat-title {
-    font-size: 15px;
+.content-block {
+    flex: 1;
+    padding-top: 20px;
+}
+
+/* Estilo de los elementos de la sección */
+.item { margin-bottom: 50px; }
+
+.date {
+    color: #f16161;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 24px;
     color: #ffd943;
-    letter-spacing: 2px;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-top: 10px;
+    margin-bottom: 4px;
 }
 
-.side-desc {
-    font-size: 14px;
-    margin-top: 30px;
-    line-height: 1.5;
-}
-
-/* Ilustración */
-
-/* Contenedor principal para que los proyectos fluyan correctamente */
-.section-block .portfolio-grid-ilustration {
+/* Grid */
+.knowledge-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos grandes columnas base */
-    gap: 40px;
-    flex: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
 }
 
-/* Proyecto 1: El arquero (Ocupa una columna completa y es alto) */
-.portfolio-item.character-full {
-    grid-row: span 2; /* Permite que la imagen sea más larga que las otras */
+.software {
     display: flex;
-    flex-direction: column;
-}
-
-/* Estilo para las etiquetas de Proyecto (H4) */
-.proyect-label {
-    color: #1f628e; /* Azul oscuro oficial */
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-/* Imágenes de ilustración */
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-    /* Sin fondo blanco para que el PNG luzca sobre el crema */
-}
-
-.portfolio-item img:hover {
-    transform: scale(1.02); /* Efecto de zoom sutil */
-}
-
-/* Ajuste para los personajes 3D y Concept Art (Proyecto 2 y 3) */
-.portfolio-item.concept-art {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-/* Extras de ilustración */
-@media (max-width: 992px) {
-    .section-block .portfolio-grid-ilustration {
-        grid-template-columns: 1fr; /* Una columna en tablets/móviles */
-    }
-    
-    .portfolio-item.character-full {
-        grid-row: span 1;
-    }
-}
-
-/* Apartado del diseño de las Playeras */
-
-/* Contenedor principal de la sección de playeras */
-.section-block .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columnas para los diseños */
-    gap: 15px;
-    flex: 1;
-    border-radius: 10px;
-}
-
-/* Ajuste para que el Mockup ocupe toda la fila superior si lo deseas */
-.portfolio-item.featured {
-    grid-column: 1 / -1; 
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    gap: 15px;
-}
-
-/* Estilo para los 6 diseños individuales */
-.portfolio-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-    background: #fffcf6; /* Fondo beige por si los PNG tienen transparencia */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06); /* Sombra suave como en la imagen */
-    transition: transform 0.3s ease;
-}
-
-.portfolio-item img:hover {
-    transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
-}
-
-/* Cambio en caso de usar celulares */
-@media (max-width: 768px) {
-    .section-block .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .section-block .portfolio-grid {
-        grid-template-columns: 1fr; /* 1 columna en celulares */
-    }
-}
-
-/* Libros (5 Columnas)*/
-.books-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas según Portafolio.jpg */
-    gap: 15px;
-    align-items: start;
-}
-
-.book-cover {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más marcada para simular volumen */
-    transition: transform 0.3s ease;
-}
-
-.book-cover:hover {
-    transform: translateY(-8px);
-}
-
-/* Flyers (5 Columnas)*/
-.flyers-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas según Portafolio.jpg */
-    gap: 15px;
-    align-items: start;
-}
-
-.flyer-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más marcada para simular volumen */
-    transition: transform 0.3s ease;
-}
-
-.flyer-img:hover {
-    transform: translateY(-8px);
-}
-
-/* Ajustes para los Celulares */
-@media (max-width: 1024px) {
-    .books-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .books-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .flyers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .books-grid, .flyers-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Apartados de los Logotipos*/
-.content-logos {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.logo-group {
-    margin-bottom: 2px;
-}
-
-.logo-category {
-    color: #f16161; /* Rojo */
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.logo-display-main {
-    padding: 20px 0;
-}
-
-/* Logo Hannis */
-.logo-hannis {
-    width: 100%;
-    max-width: 350px; /* Tamaño controlado */
-    height: auto;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.05));
-    transition: all 0.4s ease; /* Transición suave */
-    cursor: pointer;          /* Cursor de mano */
-}
-
-/* Efecto de Zoom para los logos */
-.logo-hannis:hover {
-    transform: scale(1.05); /* Crece sutilmente */
-    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1)); /* Sombra más intensa */
-}
-
-.logo-row {
-    display: flex;
-    gap: 15px; /* Espaciado entre circulos */
-    flex-wrap: wrap;
     align-items: center;
-}    
-
-.logo-round {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background: #fffcf6;
-    padding: 10px;
-    object-fit: contain;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
-    transition: all 0.3s ease;
+    gap: 80px;
 }
 
-.logo-round:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-
-.logo-group {
-    margin-bottom: 80px; /* Aumenta este número para más separación */
-    display: block;
-    width: 100%;
+.software img {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.logo-category {
-    color: #f16161; /* Color rojo */
-    font-size: 14px;
+/* Lista de Habilidades */
+.skill-group { margin-bottom: 50px; }
+
+h4 {
+    color: #f16161;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 25px; /* Espacio entre el título y cada logos */
-    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-.logo-row {
-    display: flex;
-    gap: 20px; /* Espacio horizontal entre cada círculo */
-    flex-wrap: wrap;
-}
+ul { list-style: none; }
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 50px;
 }
 
-/*6. ULTIMA LINEA*/
-footer {
-    padding: 100px 0 50px;
-    text-align: center;
-    border-top: 1px solid rgba(255, 217, 67, 0.3); /* Línea divisoria anarilla tenue */
-    margin-top: 50px;
+ul li::before {
+    content: "•";
+    color: #ffd943;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
 }
 
-/* Ajustes finales para tablets y móviles */
-@media (max-width: 1024px) {
-    .section-block {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .header-combination {
-        text-align: left; /* Mantiene la estética lateral incluso en móviles */
-        padding-left: 10px;
-        border-left: 3px solid #ffd943;
-    }
-
-    .logo-row {
-        justify-content: center;
-    }
-}
+footer { height: 150px; }

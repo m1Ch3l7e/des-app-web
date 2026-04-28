@@ -1,4 +1,4 @@
-/* RESET GENERAL BASADO EN TU CV */
+/* Reset del CV*/
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@ header {
     margin-bottom: 100px;
 }
 
-/* CONTENEDOR DE TARJETAS */
+/*Contenedor de las tarjetas (Contacto)*/
 .contact-container {
     display: flex;
     justify-content: center;
@@ -46,7 +46,7 @@ header {
     flex-wrap: wrap; /* Para que se vea bien en móviles */
 }
 
-/* Quitar el subrayado y mantener los colores originales en los links */
+/* Esto quita el subrayado*/
 .contact-link {
     text-decoration: none;
     display: block; /* Para que el enlace ocupe todo el tamaño de la tarjeta */
@@ -54,12 +54,12 @@ header {
     max-width: 350px;
 }
 
-/* Asegurar que el color del texto no cambie al ser un link */
+/* Sin cambios para el enlace visitado */
 .contact-link:visited {
     color: inherit;
 }
 
-/* ESTILO DE LAS TARJETAS AMARILLAS */
+/* Para darle estilo a las tarjetas */
 .contact-card {
     flex: 1;
     min-width: 300px;
@@ -80,14 +80,14 @@ header {
     transform: translateY(-10px); /* Pequeño efecto al pasar el mouse */
 }
 
-/* ICONOS DENTRO DE LAS TARJETAS */
+/* Icono de las tarjetas de contacto */
 .contact-icon {
     font-size: 80px;
-    color: #ffd943; /* Color amarillo de tu diseño */
+    color: #ffd943; /* Color amarillo del diseño */
     margin-bottom: 40px;
 }
 
-/* TEXTO DE CONTACTO */
+/* Texto del contacto */
 .contact-data {
     font-size: 18px;
     font-weight: 600;
@@ -95,7 +95,7 @@ header {
     text-align: center;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
     text-align: center;
     padding: 50px 0;
@@ -104,7 +104,7 @@ footer {
     text-transform: uppercase;
 }
 
-/* AJUSTES PARA CELULARES */
+/* Pequeño ajuste para los celulares */
 @media (max-width: 768px) {
     .main-title {
         font-size: 80px;
@@ -112,4 +112,20 @@ footer {
     .contact-card {
         height: 250px;
     }
+}
+
+/*6. ULTIMA LINEA*/
+footer {
+    padding: 100px 0 50px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 217, 67, 0.3); /* Línea divisoria anarilla tenue */
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #3d919d;
+    opacity: 1.0;
 }

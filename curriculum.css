@@ -139,4 +139,19 @@ ul li::before {
 }
 
 footer { height: 150px; }
-text-align: center;
+
+/*6. ULTIMA LINEA*/
+footer {
+    padding: 100px 0 50px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 217, 67, 0.3); /* Línea divisoria anarilla tenue */
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #3d919d;
+    opacity: 1.0;
+}

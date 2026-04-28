@@ -345,14 +345,6 @@ footer {
     margin-top: 50px;
 }
 
-footer p {
-    font-size: 15px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #3d919d;
-    opacity: 1.0;
-}
-
 /* Ajustes finales para tablets y móviles */
 @media (max-width: 1024px) {
     .section-block {

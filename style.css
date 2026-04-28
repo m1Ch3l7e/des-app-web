@@ -1,4 +1,4 @@
-/* RESET */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ header {
     align-items: center;
 }
 
-/* CASA */
+/* Casa icono */
 .home-icon {
     position: fixed; /* La casa se queda quieta arriba a la izquierda al bajar */
     left: 30px;
@@ -39,7 +39,7 @@ header {
     transform: scale(1.2);
 }
 
-/* TITULO PRINCIPAL */
+/* Titulo principal */
 .main-title {
     font-family: 'Pinyon Script', cursive;
     font-size: 160px; /* Un poco más grande */
@@ -47,7 +47,7 @@ header {
     margin-bottom: 40px;
 }
 
-/* BOTONES SUPERIORES */
+/* Botones de navegación */
 .top-nav {
     margin-top: 20px;
 }
@@ -71,7 +71,7 @@ header {
     color: white;
 }
 
-/* SECCIÓN PERFIL - Espaciado vertical gigante */
+/* Sección del perfil - Espaciado vertical gigante */
 .profile-section {
     padding: 200px 50px; /* 200px de separación arriba y abajo */
     display: flex;
@@ -107,10 +107,10 @@ header {
     max-width: 750px;
 }
 
-/* FRASE / CITA - Separación extrema */
+/* Cita en la págna principal - Separación extrema */
 .profile-quote {
     text-align: center;
-    padding: 250px 20px; /* Mucho aire alrededor de la frase */
+    padding: 250px 20px; /* Mucho espació alrededor de la frase */
     color: #ffd943;
     font-size: 23px;
     letter-spacing: 7px;
@@ -145,8 +145,7 @@ header {
 .nav-box:hover {
     transform: translateY(-20px);
     box-shadow: 0 25px 50px #ffd94326;
-}
-
+} 
 .nav-box i {
     font-size: 90px;
     color: #ffd943;
@@ -157,4 +156,21 @@ header {
     font-size: 20px;
     color: #3d919d;
     font-weight: 500;
+}
+
+/*6. ULTIMA LINEA*/
+footer {
+    padding: 100px 0 50px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 217, 67, 0.3); /* Línea divisoria anarilla tenue */
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #3d919d;
+    opacity: 1.0;
+
 }

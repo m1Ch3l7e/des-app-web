@@ -6,9 +6,9 @@
 }
 
 body {
-    background: #fffcf6; /* Fondo crema oficial */
+    background: #fffcf6; /* Fondo crema */
     font-family: 'Inter', sans-serif;
-    color: #3d919d; /* Azul acero oficial */
+    color: #3d919d; /* Azul acero */
     line-height: 1.6;
 }
 
@@ -23,7 +23,7 @@ header {
     left: 30px;
     top: 30px;
     font-size: 1.5rem;
-    color: #f16161; /* Rojo oficial */
+    color: #f16161; /* Rojo */
     text-decoration: none;
     z-index: 100;
 }
@@ -37,7 +37,7 @@ header {
 
 .mis-trabajos-tag {
     position: relative;
-    border: 2px solid #ffd943; /* Dorado oficial */
+    border: 2px solid #ffd943; /* Amarillo oficial */
     padding: 10px 30px;
     border-radius: 30px;
     font-size: 14px;
@@ -130,7 +130,7 @@ header {
     justify-content: flex-start;
 }
 
-/* EXTRAS DE ILUSTRACIÓN */
+/* Extras de ilustración */
 @media (max-width: 992px) {
     .section-block .portfolio-grid-ilustration {
         grid-template-columns: 1fr; /* Una columna en tablets/móviles */
@@ -141,7 +141,7 @@ header {
     }
 }
 
-/* PLAYERAS */
+/* Apartado del diseño de las Playeras */
 
 /* Contenedor principal de la sección de playeras */
 .section-block .portfolio-grid {
@@ -175,9 +175,7 @@ header {
     transform: translateY(-5px); /* Efecto sutil al pasar el mouse */
 }
 
-/* =========================================
-   RESPONSIVE PARA MÓVILES
-   ========================================= */
+/* Cambio en caso de usar celulares */
 @media (max-width: 768px) {
     .section-block .portfolio-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
@@ -190,7 +188,7 @@ header {
     }
 }
 
-/* REJILLA PARA LIBROS (5 Columnas)*/
+/* Libros (5 Columnas)*/
 .books-grid {
     flex: 1;
     display: grid;
@@ -211,7 +209,7 @@ header {
     transform: translateY(-8px);
 }
 
-/* REJILLA PARA FLYERS (5 Columnas)*/
+/* Flyers (5 Columnas)*/
 .flyers-grid {
     flex: 1;
     display: grid;
@@ -232,7 +230,7 @@ header {
     transform: translateY(-8px);
 }
 
-/* AJUSTES EXTRAS */
+/* Ajustes para los Celulares */
 @media (max-width: 1024px) {
     .books-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -254,7 +252,7 @@ header {
     }
 }
 
-/*5. LOGOTIPOS*/
+/* Apartados de los Logotipos*/
 .content-logos {
     flex: 1;
     display: flex;
@@ -267,7 +265,7 @@ header {
 }
 
 .logo-category {
-    color: #f16161; /* Rojo oficial */
+    color: #f16161; /* Rojo */
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -289,7 +287,7 @@ header {
     cursor: pointer;          /* Cursor de mano */
 }
 
-/* Efecto de Zoom para el logo principal */
+/* Efecto de Zoom para los logos */
 .logo-hannis:hover {
     transform: scale(1.05); /* Crece sutilmente */
     filter: drop-shadow(0 8px 15px rgba(0,0,0,0.1)); /* Sombra más intensa */
@@ -324,11 +322,11 @@ header {
 }
 
 .logo-category {
-    color: #f16161; /* Color coral de tus capturas */
+    color: #f16161; /* Color rojo */
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 25px; /* Espacio entre el título y sus logos */
+    margin-bottom: 25px; /* Espacio entre el título y cada logos */
     font-weight: 600;
 }
 
@@ -343,7 +341,7 @@ header {
 footer {
     padding: 100px 0 50px;
     text-align: center;
-    border-top: 1px solid rgba(255, 217, 67, 0.3); /* Línea divisoria dorada tenue */
+    border-top: 1px solid rgba(255, 217, 67, 0.3); /* Línea divisoria anarilla tenue */
     margin-top: 50px;
 }
 

@@ -1,4 +1,4 @@
-/* RESET GENERAL */
+/* Reset General */
 * {
     margin: 0;
     padding: 0;
@@ -52,7 +52,7 @@ header {
     font-weight: 500;
 }
 
-/* ESTRUCTURA DE SECCIONES */
+/* Estructura del curiculum por sección */
 .cv-section {
     display: flex;
     max-width: 1200px;
@@ -75,7 +75,7 @@ header {
     padding-top: 20px;
 }
 
-/* ESTILOS DE CONTENIDO */
+/* Estilo de los elementos de la sección */
 .item { margin-bottom: 50px; }
 
 .date {
@@ -91,7 +91,7 @@ h3 {
     margin-bottom: 4px;
 }
 
-/* GRID DE CONOCIMIENTOS */
+/* Grid */
 .knowledge-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -111,7 +111,7 @@ h3 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* LISTAS DE HABILIDADES */
+/* Lista de Habilidades */
 .skill-group { margin-bottom: 50px; }
 
 h4 {
